@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jalgaa Kadyr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="{% static 'script/script.js' %}"></script>
+</head>
+<body>
+<header>
+    <img src="{% static 'img/logo.png' %}" alt="" id="logo">
+    <div class="mbutton">Menu<img class="vector" src="{% static 'img/up.png' %}" alt=""></div>
+    <ul class="menu">
+        <li><a href="#">Main</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Profile</a></li>
+    </ul>
+    <div class="contacts">
+        <a href="tel:+7 771 986 5511" type="phone" id="phone">8 771 986 55 11</a><br>
+        <span>Звони скорее</span>
+    </div>
+    <span id="found">Найдено {{ found }} котов</span>
+</header>
+<div class="gradient"></div>
+<div class="content">
+    <div class="filter">
+        <span>Сортировать по:</span>
+        <span>Цене<img src="{% static 'img/down.png' %}" alt=""></span>
+        <span>Возрасту<img src="{% static 'img/down.png' %}" alt=""></span>
+    </div>
+    <div class="cards">
+        {% for card in cards %}
+            <div class="card">
+                <div><img class="picture" src="{% static ''%}{{ card.image }}" alt=""></div>
+                <div class="description">
+                    <span class="name">{{ card.name }}</span>
+                    <div class="params">
+                        <div class="rectangle"><img src="{% static 'img/reactangle.png' %}" alt=""></div>
+                        <span class="color">{{ card.color }}</span>
+                        <div class="age">
+                            <span class="sub">{{ card.age }} месяцев</span><br>
+                            <span>Возраст</span>
+                        </div>
+                        <div class="legs">
+                            <span class="sub">{{ card.legs }}</span><br>
+                            <span>Кол-во лап</span>
+                        </div>
+                    </div>
+                    <span class="price">{{ card.price }} руб.</span>
+                </div>
+                <button class="buy">Купить</button>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<footer>
+    <div class="left">
+        <span class="text1">Успей купить</span>
+        <span class="text2">Подпишись и успей словить все акции</span>
+    </div>
+    <div class="right">
+        <input type="text" class="input" placeholder="Email">
+        <button>Подписаться</button>
+        <input type="checkbox">
+        <span>Подписаться на новости</span>
+    </div>
+</footer>
+</body>
+</html>

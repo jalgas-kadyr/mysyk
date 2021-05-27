@@ -1,0 +1,281 @@
+body{
+    margin: 0px;
+}
+header{
+	background-color: black;
+	background-image: url('https://i.pinimg.com/originals/f6/c9/80/f6c980b522622466f4d9298192c6503e.jpg');
+	background-size: 30% 100%;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    display: flex;
+    padding-left: 200px;
+    padding-right: 200px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#logo{
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+}
+.gradient {
+    background: black; /* Для старых браузров */
+    background: linear-gradient(to bottom, black, white);
+    padding: 3px;
+    height: 0px;
+}
+.menu{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 40px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.menu li{
+    display: inline-block;
+    color: white;
+    margin: 20px;
+}
+
+.menu li a{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+#found{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+}
+.contacts{
+    color: white;
+    margin-top: 40px;
+}
+.contacts #phone{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+}
+.contacts span{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+.filter{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.filter span{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 30px;
+}
+.filter span img{
+    margin-left: 5px;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.card{
+    margin: 30px;
+}
+.card .description{
+    background-color: #F3F3F3;
+    width: 380px;
+}
+.card .name{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.params{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    zoom: 1.2;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.params .rectangle{
+    margin-top: 4px;
+}
+.params span{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+.params .color{
+    font-weight: 700;
+    width: 30%;
+}
+.params .age{
+    font-weight: 700;
+    width: 33%;
+}
+.params .legs{
+    font-weight: 700;
+    width: 33%;
+}
+.params .age .sub{
+    font-weight: bold;
+}
+.params .legs .sub{
+    font-weight: bold;
+}
+.description .price{
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+.buy{
+    border: 0px;
+    width: 380px;
+    height: 80px;
+    background-color: #6EBBD3;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 0px 0px 6px 6px;
+}
+footer{
+    background-color: #1F2021;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+.left{
+    width: 30%;
+}
+.text1{
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+}
+.text2{
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+}
+.right{
+    display: flex;
+    flex-wrap: wrap;
+    vertical-align: baseline;
+    width: 34%;
+}
+.right .input{
+    width: 240px;
+    height: 45px;
+    border-radius: 6px;
+    border: 0px;
+    font-size: 1em;
+}
+.right .input::placeholder{
+    font-family: Montserrat, sans-serif;
+    font-weight: normal;
+}
+.right button{
+    width: 240px;
+    height: 47px;
+    border-radius: 6px;
+    border: 0px;
+    background-color: #6EBBD3;
+    margin-left: 5px;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+.right button:hover{
+    cursor: pointer;
+}
+.right span{
+    font-family: Montserrat, sans-serif;
+    font-weight: normal;
+}
+.mbutton{
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    visibility: hidden;
+}
+@media screen and (max-width: 768px) {
+    header{
+        display: block;
+        background-size: cover;
+        opacity: 0.75;
+    }
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    header img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        zoom: 2;
+    }
+    .card{
+        margin: 20px;
+        zoom: 0.9;
+    }
+    .right button{
+        margin: 0px;
+    }
+    .contacts, #found{
+        zoom: 0.9;
+    }
+    .mbutton{
+        visibility: visible;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 10px;
+        zoom: 3;
+    }
+    .vector{
+        zoom: 2;
+    }
+    .mbutton:hover{
+        cursor: pointer;
+    }
+    .menu li a{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    header{
+        padding-right: 100px;
+        padding-left: 100px;
+        padding-top: 20px;
+        text-align: center;
+    }
+    .menu{
+        visibility: hidden;
+        margin: 0px;
+        transition: 1s;
+        zoom: 0.1;
+        opacity: 0;
+    }
+    .menu li{
+        display: table;
+        margin: auto;
+    }
+    .vector{
+        transition: 1s;
+    }
+}
